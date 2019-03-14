@@ -13,6 +13,6 @@ main = do
     glitched <- foldM (flip ($)) inputImg [ randomSortBytes
                                           , randomSortBytes 
                                           , randomGlitch ]
-    let newName = mconcat ["withfold", inputName]
+    let newName = mconcat ["glitched_", inputName]
     BT.writeFile newName glitched
     putStrLn "all done!"
